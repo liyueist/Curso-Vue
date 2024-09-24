@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="myApp">
+
+    <h1>Batman quotes</h1>
+     <!-- @ es igual a v-on -->
+    <button @click ="showAuthor"> Show author </button>
+
+    <hr>
+
+    <ul>
+        <!-- está basado en el for-of -->
+        <li v-for=" (quote, index ) in quotes">
+            <span> {{index + 1}} - {{quote.quote}} </span>
+            <!-- lit un if, si esta en true, hace eso -->
+            <blockquote v-if="author">{{ quote.author }}</blockquote> 
+
+        </li>
+
+    </ul>
+
+</div>
+
+
+
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
